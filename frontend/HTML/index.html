@@ -98,28 +98,24 @@ input[type=text], select {
     background-color: #f8f8f8;
     resize: none;
   }
+
   label {
     padding: 12px 12px 12px 0;
     display: inline-block;
   }
 
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  form label {
+    display: block;
+  }
+  form p {
+    margin: 0;
   }
   
-  .col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-  }
-  
-  .col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-  }
 </style>
 </head>
 <body>
@@ -136,55 +132,43 @@ input[type=text], select {
     <h1>Inicio</h1>
     <h2>Crea tu pastel</h2>
     <div class="container">
-        <form action="/action_page.php">
-            <div class="row">
-                <div class="col-25">
-                    <label for="sabores1">Selecciona el primer sabor:</label>
-                </div>
-                <div class="col-75">
-                    <select name="sabores1" id="sabores1">
-                        <option value="Vainilla">Vainilla - $250</option>
-                        <option value="Fresa">Fresa - $250</option>
-                        <option value="Chocolate">Chocolate - $300</option>
-                        <option value="Red Veltet">Red Veltet - $400</option>
-                    </select>
-                </div>
-                <div class="col-25">
-                    <label for="sabores2">Selecciona el segundo sabor:</label>
-                </div>
-                <div class="col-75">
-                    <select name="sabores2" id="sabores2">
-                        <option value="Vainilla">Vainilla - $250</option>
-                        <option value="Fresa">Fresa - $250</option>
-                        <option value="Chocolate">Chocolate - $300</option>
-                        <option value="Red Veltet">Red Veltet - $400</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="adornos1">Selecciona el primer adorno:</label>
-                </div>
-                <div class="col-75">
-                    <select name="adornos1" id="adornos1">
-                        <option value="Estrella">Estrella - $150 </option>
-                        <option value="Banda">Banda - $100 </option>
-                        <option value="Fotografia">Fotografia - $200</option>
-                        <option value="Texto">Texto - $50</option>
-                    </select>
-                </div>
-                <div class="col-25">
-                    <label for="adornos2">Seleccion el segundo adorno:</label>
-                </div>
-                <div class="col-75">
-                    <select name="adornos2" id="adornos2">
-                        <option value="Estrella">Estrella - $150 </option>
-                        <option value="Banda">Banda - $100 </option>
-                        <option value="Fotografia">Fotografia - $200</option>
-                        <option value="Texto">Texto - $50</option>
-                    </select>
-                </div>
-            </div>
+        <form action="/action_page.php" class="form">
+          <p>
+            <label for="sabores1">Selecciona el primer sabor:</label>
+            <select name="sabores1" id="sabores1">
+                <option value="Vainilla">Vainilla - $250</option>
+                <option value="Fresa">Fresa - $250</option>
+                <option value="Chocolate">Chocolate - $300</option>
+                <option value="Red Veltet">Red Veltet - $400</option>
+            </select>
+          </p>
+          <p>
+            <label for="sabores2">Selecciona el segundo sabor:</label>
+            <select name="sabores2" id="sabores2">
+                <option value="Vainilla">Vainilla - $250</option>
+                <option value="Fresa">Fresa - $250</option>
+                <option value="Chocolate">Chocolate - $300</option>
+                <option value="Red Veltet">Red Veltet - $400</option>
+            </select>
+          </p>
+            <p>
+              <label for="adornos1">Selecciona el primer adorno:</label>
+            <select name="adornos1" id="adornos1">
+                <option value="Estrella">Estrella - $150 </option>
+                <option value="Banda">Banda - $100 </option>
+                <option value="Fotografia">Fotografia - $200</option>
+                <option value="Texto">Texto - $50</option>
+            </select>
+            </p>
+            <p>
+              <label for="adornos2">Seleccion el segundo adorno:</label>
+            <select name="adornos2" id="adornos2">
+                <option value="Estrella">Estrella - $150 </option>
+                <option value="Banda">Banda - $100 </option>
+                <option value="Fotografia">Fotografia - $200</option>
+                <option value="Texto">Texto - $50</option>
+            </select>
+            </p>
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" value=""><br>
             <label for="telefono">Telefono:</label><br>
