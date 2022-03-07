@@ -8,17 +8,19 @@
 body { 
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #242527;
+  color: white;
 }
 
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #242527;
   padding: 20px 10px;
 }
 
 .header a {
   float: left;
-  color: black;
+  color: white;
   text-align: center;
   padding: 12px;
   text-decoration: none;
@@ -34,12 +36,12 @@ body {
 
 .header a:hover {
   background-color: #ddd;
-  color: black;
+  color: white;
 }
 
 .header a.active {
-  background-color: dodgerblue;
-  color: white;
+  background-color: pink;
+  color: #242527;
 }
 
 .header-right {
@@ -69,33 +71,34 @@ body {
     padding: 8px;
   }
   
-  .tabla tr:nth-child(even){background-color: #f2f2f2;}
+  .tabla tr:nth-child(even){background-color: #8b8b8b;}
   
-  .tabla tr:hover {background-color: #ddd;}
+  .tabla tr:hover {background-color: #242527;}
   
   .tabla th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #04AA6D;
-    color: white;
+    background-color: pink;
+    color: black;
   }
 </style>
 </head>
 <body>
-
-<div class="header">
-  <a href="#default" class="logo">Pasteleria Espacial</a>
-  <div class="header-right">
-    <a class="active" href="#home">Home</a>
-    <a href="#contact">Contacto</a>
+  <div class="header">
+    <a href="#default" class="logo">
+      <img src="cakely_logo.png" alt="" style="width: 80px; height: 80px;">
+    </a>
+    <div class="header-right">
+      <a class="active" href="#home">Home</a>
+      <a href="#contact">Contacto</a>
+    </div>
   </div>
-</div>
 
 <div style="padding-left:20px" >
     <h1>Inicio</h1>
     <h2>Inventario</h2>
-    <table class="tabla">
+    <table class="tabla" style="width: 30%;">
         <tr>
             <th>Sabor</th>
             <th style="text-align: center;">Cantidad Disponible</th>
